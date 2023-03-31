@@ -10,7 +10,7 @@ Blood Bank Management Systems are important for efficient and effective manageme
 We used PostgreSQL to create a database for a Blood Bank Management System that tracks blood donations, inventory, and other related information, including managing blood camps. We followed the principles of RDBMS and normalized the tables to minimize data redundancy and ensure data integrity. We created the following tables:
 
 <h3>Important tables:</h3>
-<b>Donor:</b> Stores information about blood donors, including donor ID, name, age, blood group, contact information, and last donation date.<br>
+* Donor: Stores information about blood donors, including donor ID, name, age, blood group, contact information, and last donation date.<br>
 * Donation: Stores information about blood donations, including donation ID, donor ID, donation date, blood type, and quantity.<br>
 * Inventory: Stores information about the inventory of blood products, including inventory ID, blood type, quantity, and expiration date.<br>
 * Hospital: Stores information about hospitals that receive blood products from the blood bank, including hospital ID, name, location, and contact information.<br>
