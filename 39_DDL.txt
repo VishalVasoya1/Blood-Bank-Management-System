@@ -1,0 +1,146 @@
+﻿DDL:
+
+
+create schema blood_bank;
+set search_path to blood_bank;
+
+
+create table blood_bank(
+        bb_id varchar(4) primary key,
+        bb_name varchar(100) not null,
+        bb_contact bigint not null,
+        bb_address varchar(50) not null,
+        bb_city varchar(20) not null,
+        bb_state varchar(20) not null,
+        bb_pincode int not null
+)
+===========================================================
+create table department(
+        dept_id varchar(4) primary key,
+        dept_name varchar(20) not null,
+        bb_id varchar(4),
+        foreign key(bb_id) references blood_bank(bb_id) on delete cascade on update cascade
+)
+===========================================================
+create table inventory(
+        b_id varchar(4) primary key,
+        dept_id varchar(4),
+        blood_group varchar(15) not null,
+        blood_stock int not null,
+        foreign key(dept_id) references department(dept_id) on delete cascade on update cascade
+)
+===========================================================
+create table camp(
+    c_id varchar(4) primary key,
+    dept_id varchar(4),
+    c_contact_no bigint not null,
+    c_date date not null,
+    c_location varchar(30) not null,
+    c_city varchar(15) not null,
+    c_state varchar(15) not null,
+    c_pincode int not null,
+        foreign key(dept_id) references department(dept_id) on delete cascade on update cascade
+)
+===========================================================
+create table employee(
+        e_id varchar(4) primary key,
+        e_fname varchar(15) not null,
+        e_lname varchar(15) not null,
+        e_dob date not null,
+        e_age int not null,
+        e_gender varchar(5) not null,
+        dept_id varchar(4),
+        foreign key(dept_id) references department(dept_id) on delete cascade on update cascade
+)
+===========================================================
+create table donor(
+        d_id varchar(4) primary key,
+        d_fname varchar(15) not null,
+        d_lname varchar(15) not null,
+        d_dob date not null,
+        d_blood_group varchar(15) not null,
+        d_weight int not null,
+        d_gender varchar(5) not null,
+        d_age int not null,
+        d_email varchar(30) not null,
+        d_address varchar(50) not null,
+        d_city varchar(15) not null,
+        d_state varchar(15) not null,
+        d_pincode int not null,
+        c_id varchar(4),
+    foreign key(c_id) references camp(c_id) on delete cascade on update cascade
+)
+===========================================================
+create table donor_contact(
+        d_id varchar(4),
+        d_contact_no bigint not null,
+        foreign key(d_id) references donor(d_id) on delete cascade on update cascade
+)
+===========================================================
+create table donation(
+        b_id varchar(4) primary key,
+        d_id varchar(4),
+        d_date date not null,
+        d_unit float(2) not null,
+        foreign key(d_id) references donor(d_id) on delete cascade on update cascade
+)
+===========================================================
+create table hospital(
+    h_id varchar(4) primary key,
+    h_name varchar(50) not null,
+    h_contact_no bigint not null
+)
+===========================================================
+create table patient(
+        p_id varchar(4) primary key,
+        p_fname varchar(15) not null,
+        p_lname varchar(25) not null,
+        p_dob date not null,
+        p_blood_grp varchar(15) not null,
+        p_weight int not null,
+        p_email varchar(50) not null,
+        p_age int not null,
+        p_gender varchar(5) not null,
+        p_address varchar(50) not null,
+     p_city varchar(15) not null,
+        p_state varchar(15) not null,
+        p_pincode int not null,
+        h_id varchar(4),
+        foreign key(h_id) references hospital(h_id) on delete cascade on update cascade
+)
+===========================================================
+create table patient_contact(
+        p_id varchar(4),
+        p_contact_no bigint not null,
+        foreign key(p_id) references patient(p_id)
+        on delete cascade on update cascade
+)
+===========================================================
+create table patient_disease(
+        p_id varchar(4),
+        p_disease varchar(25) not null,
+        foreign key(p_id) references patient(p_id)
+        on delete cascade on update cascade
+)
+===========================================================
+create table payment(
+        t_id varchar(4) primary key,
+        t_amount int not null,
+        t_date date not null,
+        p_id varchar(4),
+        foreign key(p_id) references patient(p_id)
+        on delete cascade on update cascade
+)
+===========================================================
+create table request(
+        r_id varchar(4) primary key,
+        r_date date not null,
+        r_blood_amount float(2) not null,
+        r_blood_group varchar(15) not null,
+        p_id varchar(4),
+        h_id varchar(4),
+        bb_id varchar(4),
+        foreign key(p_id) references patient(p_id) on delete cascade on update cascade,
+        foreign key(h_id) references hospital(h_id) on delete cascade on update cascade,
+        foreign key(bb_id) references blood_bank(bb_id) on delete cascade on update cascade
+)

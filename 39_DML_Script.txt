@@ -1,0 +1,561 @@
+﻿DML Script:
+
+
+BLOOD BANK:
+
+
+INSERT INTO blood_bank (bb_id,bb_name,bb_contact,bb_address,bb_city,bb_state,bb_pincode)
+VALUES('bb01','Lok Samarpan Blood Bank',9856367543,'Mota Varachha','Surat','Gujarat','394101');
+INSERT INTO blood_bank (bb_id,bb_name,bb_contact,bb_address,bb_city,bb_state,bb_pincode)
+VALUES('bb02','Voluntar Blood Bank',9867459867,'Sughad','Gandhinagar','Gujarat','382424');
+INSERT INTO blood_bank (bb_id,bb_name,bb_contact,bb_address,bb_city,bb_state,bb_pincode)
+VALUES('bb03','Red Cross Blood Bank',9932127543,'Gill Census Town','Ludhiana','Punjab','141116');
+INSERT INTO blood_bank (bb_id,bb_name,bb_contact,bb_address,bb_city,bb_state,bb_pincode)
+VALUES('bb04','Samarpan Blood Bank',9234534543,'Ajronda Chowk','Faridaabad','Hariyana','121001');
+INSERT INTO blood_bank (bb_id,bb_name,bb_contact,bb_address,bb_city,bb_state,bb_pincode)
+VALUES('bb05','Sardar Vallabhbhai Patel Blood Bank',7896567865,'Indiranagar','Banglore','Karnataka','560038');
+
+
+======================================================================
+
+
+Department:
+
+
+INSERT INTO department(dept_id,dept_name,bb_id)
+VALUES('d01','INVENTORY','bb01');
+INSERT INTO department(dept_id,dept_name,bb_id)
+VALUES('d02','CAMP','bb01');
+INSERT INTO department(dept_id,dept_name,bb_id)
+VALUES('d03','INVENTORY','bb02');
+INSERT INTO department(dept_id,dept_name,bb_id)
+VALUES('d04','CAMP','bb02');
+INSERT INTO department(dept_id,dept_name,bb_id)
+VALUES('d05','INVENTORY','bb03');
+INSERT INTO department(dept_id,dept_name,bb_id)
+VALUES('d06','CAMP','bb03');
+INSERT INTO department(dept_id,dept_name,bb_id)
+VALUES('d07','INVENTORY','bb04');
+INSERT INTO department(dept_id,dept_name,bb_id)
+VALUES('d08','CAMP','bb04');
+INSERT INTO department(dept_id,dept_name,bb_id)
+VALUES('d09','INVENTORY','bb05');
+INSERT INTO department(dept_id,dept_name,bb_id)
+VALUES('d10','CAMP','bb05');
+
+
+======================================================================
+
+
+Employee:
+
+
+INSERT INTO employee(e_id,e_fname,e_lname,e_dob,e_age,e_gender,dept_id)
+VALUES('e01','Raj','Mayani','2000-12-17',21,'M','d01');
+INSERT INTO employee(e_id,e_fname,e_lname,e_dob,e_age,e_gender,dept_id)
+VALUES('e02','Keval','Tilavat','1998-08-14',23,'M','d02');
+INSERT INTO employee(e_id,e_fname,e_lname,e_dob,e_age,e_gender,dept_id)
+VALUES('e03','Party','Suryadhvaj','2000-07-11',21,'M','d03');
+INSERT INTO employee(e_id,e_fname,e_lname,e_dob,e_age,e_gender,dept_id)
+VALUES('e04','Bhumi','Bosamiya','1999-02-10',20,'F','d04');
+INSERT INTO employee(e_id,e_fname,e_lname,e_dob,e_age,e_gender,dept_id)
+VALUES('e05','Kartik','Sonani','1995-01-03',26,'M','d05');
+INSERT INTO employee(e_id,e_fname,e_lname,e_dob,e_age,e_gender,dept_id)
+VALUES('e06','Prachi','Bist','1998-04-23',23,'F','d06');
+INSERT INTO employee(e_id,e_fname,e_lname,e_dob,e_age,e_gender,dept_id)
+VALUES('e07','Rutik','Vaholiya','2001-06-11',20,'M','d07');
+INSERT INTO employee(e_id,e_fname,e_lname,e_dob,e_age,e_gender,dept_id)
+VALUES('e08','Manav','Desai','1997-01-03',25,'M','d08');
+INSERT INTO employee(e_id,e_fname,e_lname,e_dob,e_age,e_gender,dept_id)
+VALUES('e09','Malavika','Nair','1995-04-23',26,'F','d09');
+INSERT INTO employee(e_id,e_fname,e_lname,e_dob,e_age,e_gender,dept_id)
+VALUES('e10','Jemin','Sukhadiya','1999-06-11',23,'M','d10');
+
+
+==================================================================================================================================
+
+
+Camp: 
+
+
+INSERT INTO camp(c_id,dept_id,c_contact_no,c_date,c_location,c_city,c_state,c_pincode)
+VALUES('c01','d02',9756873456,'2021-11-18','Varachha','Surat','Gujarat','395006');
+
+
+INSERT INTO camp(c_id,dept_id,c_contact_no,c_date,c_location,c_city,c_state,c_pincode)
+VALUES('c02','d04',9865456789,'2021-12-19','Sughad','Gandhinagar','Gujarat','382424');
+
+
+INSERT INTO camp(c_id,dept_id,c_contact_no,c_date,c_location,c_city,c_state,c_pincode)
+VALUES('c03','d06',9534873456,'2021-01-10','Gill Census Town','Ludhiana','Punjab','141116');
+
+
+INSERT INTO camp(c_id,dept_id,c_contact_no,c_date,c_location,c_city,c_state,c_pincode)
+VALUES('c04','d08',9129843456,'2021-11-10','Ajronda Chowk','Faridaabad','Hariyana','121001');
+
+
+INSERT INTO camp(c_id,dept_id,c_contact_no,c_date,c_location,c_city,c_state,c_pincode)
+VALUES('c05','d10',9782561456,'2021-12-15' , 'Indiranagar' , 'Banglore','Karnataka','560038');
+
+
+INSERT INTO camp(c_id,dept_id,c_contact_no,c_date,c_location,c_city,c_state,c_pincode)
+VALUES('c06','d04',9982356326,'2021-02-15','Sughad','Gandhinagar','Gujarat','382424');
+
+
+======================================================================================================================================================================
+
+
+Donor:
+
+
+INSERT INTO donor(d_id,d_fname,d_lname,d_dob,d_blood_group,d_weight,d_gender,d_age,d_email,d_address,d_city,d_state,d_pincode,c_id)
+VALUES('d001','Vishal','Vasoya','2000-12-17','A Negative',70,'M',22,'vasoyavishal33@gmail.com','Varachha' ,'Surat','Gujarat','395006','c01');
+
+
+INSERT INTO donor(d_id,d_fname,d_lname,d_dob,d_blood_group,d_weight,d_gender,d_age,d_email,d_address,d_city,d_state,d_pincode,c_id)
+VALUES('d002','Khusal','Lukhi','1995-01-13','B Negative',65,'M',26,'Lukhikhusal@gmail.com','Amroli','Surat','Gujarat','395006','c01');
+
+
+INSERT INTO donor(d_id,d_fname,d_lname,d_dob,d_blood_group,d_weight,d_gender,d_age,d_email,d_address,d_city,d_state,d_pincode,c_id)
+VALUES('d003','rachit','singh','1999-12-07','A Positive',75,'M',22,'rachitrsingh@gmail.com','Varachha' ,'Surat','Gujarat','395006','c01');
+
+
+INSERT INTO donor(d_id,d_fname,d_lname,d_dob,d_blood_group,d_weight,d_gender,d_age,d_email,d_address,d_city,d_state,d_pincode,c_id)
+VALUES('d004','Prachi','Bist','2000-11-13','B Positive',55,'F',21,'prachi123@gmail.com','Amroli','Surat','Gujarat','395006','c01');
+
+
+INSERT INTO donor(d_id,d_fname,d_lname,d_dob,d_blood_group,d_weight,d_gender,d_age,d_email,d_address,d_city,d_state,d_pincode,c_id)
+VALUES('d005','Chirag','Chatwani','1998-02-12','AB Negative',80,'M',24,'chiragchatwani@gmail.com','Varachha' ,'Surat','Gujarat','395006','c01');
+
+
+INSERT INTO donor(d_id,d_fname,d_lname,d_dob,d_blood_group,d_weight,d_gender,d_age,d_email,d_address,d_city,d_state,d_pincode,c_id)
+VALUES('d006','nidhi','sadhwani','1995-01-13','AB Positive',56,'M',26,'nidhisadhwani@gmail.com','Amroli','Surat','Gujarat','395006','c01');
+
+
+INSERT INTO donor(d_id,d_fname,d_lname,d_dob,d_blood_group,d_weight,d_gender,d_age,d_email,d_address,d_city,d_state,d_pincode,c_id)
+VALUES('d007','bhavya','chanrachala','2001-02-17','O Negative',75,'M',20,'bhavya1211@gmail.com','Varachha' ,'Surat','Gujarat','395006','c01');
+
+
+INSERT INTO donor(d_id,d_fname,d_lname,d_dob,d_blood_group,d_weight,d_gender,d_age,d_email,d_address,d_city,d_state,d_pincode,c_id)
+VALUES('d008','astha','deogharia','1999-01-13','O Positive',65,'M',22,'asthadeogharia@gmail.com','Amroli','Surat','Gujarat','395006','c01');
+
+
+INSERT INTO donor(d_id,d_fname,d_lname,d_dob,d_blood_group,d_weight,d_gender,d_age,d_email,d_address,d_city,d_state,d_pincode,c_id)
+VALUES('d009','Bhumi','Bosamiya','2001-11-10','A Negative',59,'F',21,'bhumii67@gmail.com','Sughad','Gandhinagar','Gujarat','382424','c02');
+
+
+INSERT INTO donor(d_id,d_fname,d_lname,d_dob,d_blood_group,d_weight,d_gender,d_age,d_email,d_address,d_city,d_state,d_pincode,c_id)
+VALUES('d010','Apurba','Adhikari','1996-11-12','B Negative',65,'M',26,'apurbaadhi@gmail.com','Sughad','Gandhinagar','Gujarat','382424','c02');
+
+
+INSERT INTO donor(d_id,d_fname,d_lname,d_dob,d_blood_group,d_weight,d_gender,d_age,d_email,d_address,d_city,d_state,d_pincode,c_id)
+VALUES('d011','akansha','porwal','1999-12-07','A Positive',75,'F',22,'aakansha334@gmail.com','Sughad','Gandhinagar','Gujarat','382424','c02');
+
+
+INSERT INTO donor(d_id,d_fname,d_lname,d_dob,d_blood_group,d_weight,d_gender,d_age,d_email,d_address,d_city,d_state,d_pincode,c_id)
+VALUES('d012','abhishek','Suman','2000-11-13','B Positive',55,'M',21,'abhishek12@gmail.com','Sughad','Gandhinagar','Gujarat','382424','c02');
+
+
+INSERT INTO donor(d_id,d_fname,d_lname,d_dob,d_blood_group,d_weight,d_gender,d_age,d_email,d_address,d_city,d_state,d_pincode,c_id)
+VALUES('d013','Jainam','Shah','1998-02-12','AB Negative',80,'M',24,'Jainam12@gmail.com','Sughad','Gandhinagar','Gujarat','382424','c02');
+
+
+INSERT INTO donor(d_id,d_fname,d_lname,d_dob,d_blood_group,d_weight,d_gender,d_age,d_email,d_address,d_city,d_state,d_pincode,c_id)
+VALUES('d014','Ojesh','Vyas','1995-01-13','AB Positive',56,'M',26,'Ojeshvyas@gmail.com','Sughad','Gandhinagar','Gujarat','382424','c02');
+
+
+INSERT INTO donor(d_id,d_fname,d_lname,d_dob,d_blood_group,d_weight,d_gender,d_age,d_email,d_address,d_city,d_state,d_pincode,c_id)
+VALUES('d015','Harsh','Doshi','2001-02-17','O Negative',75,'M',20,'harsh1299@gmail.com','Sughad','Gandhinagar','Gujarat','382424','c02');
+
+
+INSERT INTO donor(d_id,d_fname,d_lname,d_dob,d_blood_group,d_weight,d_gender,d_age,d_email,d_address,d_city,d_state,d_pincode,c_id)
+VALUES('d016','pavan','gandhi','1999-01-13','O Positive',65,'M',22,'pavangandhi@gmail.com','Sughad','Gandhinagar','Gujarat','382424','c02');
+
+
+INSERT INTO donor(d_id,d_fname,d_lname,d_dob,d_blood_group,d_weight,d_gender,d_age,d_email,d_address,d_city,d_state,d_pincode,c_id)
+VALUES('d017','Pratik','Patil','1999-10-11','A Positive',65,'M',31,'ppatil@gmail.com','Gill Census Town','Ludhiana','Punjab','141116','c03');
+
+
+INSERT INTO donor(d_id,d_fname,d_lname,d_dob,d_blood_group,d_weight,d_gender,d_age,d_email,d_address,d_city,d_state,d_pincode,c_id)
+VALUES('d018','Krunal','Venom','2000-09-12','AB Negative',65,'M',31,'ppatil@gmail.com','Gill Census Town','Ludhiana','Punjab','141116','c03');
+
+
+INSERT INTO donor(d_id,d_fname,d_lname,d_dob,d_blood_group,d_weight,d_gender,d_age,d_email,d_address,d_city,d_state,d_pincode,c_id)
+VALUES('d019','Aynam','Vasoya','1998-12-17','A Negative',75,'M',24,'ayman1211@gmail.com','Gill Census Town','Ludhiana','Punjab','141116','c03');
+
+
+INSERT INTO donor(d_id,d_fname,d_lname,d_dob,d_blood_group,d_weight,d_gender,d_age,d_email,d_address,d_city,d_state,d_pincode,c_id)
+VALUES('d020','Khusal','Lukhi','1995-01-13','B Negative',65,'M',26,'Lukhikhusal@gmail.com','Gill Census Town','Ludhiana','Punjab','141116','c03');
+
+
+INSERT INTO donor(d_id,d_fname,d_lname,d_dob,d_blood_group,d_weight,d_gender,d_age,d_email,d_address,d_city,d_state,d_pincode,c_id)
+VALUES('d021','Nishant','Koradia','1999-10-11','O Positive',65,'M',22,'nkoradia@gmail.com','Ajronda Chowk','Faridaabad','Hariyana','121001','c04');
+
+
+INSERT INTO donor(d_id,d_fname,d_lname,d_dob,d_blood_group,d_weight,d_gender,d_age,d_email,d_address,d_city,d_state,d_pincode,c_id)
+VALUES('d022','Tanya','Jagyasi','2000-02-11','AB Positive',65,'F',21,'tanyajig@gmail.com','Ajronda Chowk','Faridaabad','Hariyana','121001','c04');
+
+
+INSERT INTO donor(d_id,d_fname,d_lname,d_dob,d_blood_group,d_weight,d_gender,d_age,d_email,d_address,d_city,d_state,d_pincode,c_id)
+VALUES('d023','pranay','kodhari','1998-10-11','O Negative',65,'M',23,'pranay22@gmail.com','Ajronda Chowk','Faridaabad','Hariyana','121001','c04');
+
+
+INSERT INTO donor(d_id,d_fname,d_lname,d_dob,d_blood_group,d_weight,d_gender,d_age,d_email,d_address,d_city,d_state,d_pincode,c_id)
+VALUES('d024','Malavika','Nair','2000-02-11','B Positive',65,'F',21,'Malavika3211@gmail.com','Ajronda Chowk','Faridaabad','Hariyana','121001','c04');
+
+
+INSERT INTO donor(d_id,d_fname,d_lname,d_dob,d_blood_group,d_weight,d_gender,d_age,d_email,d_address,d_city,d_state,d_pincode,c_id)
+VALUES('d025','Bhavin','Soneji','1999-02-07','A Negative',56,'M',23,'bhavin12@gmail.com','Indiranagar','Banglore','Karnataka','560038','c05');
+
+
+INSERT INTO donor(d_id,d_fname,d_lname,d_dob,d_blood_group,d_weight,d_gender,d_age,d_email,d_address,d_city,d_state,d_pincode,c_id)
+VALUES('d026','Vidhi','Shah','1999-01-11','B Positive',60,'F',22, 'vshah21@gmail.com','Indiranagar','Banglore','Karnataka','560038','c05'); 
+
+
+INSERT INTO donor(d_id,d_fname,d_lname,d_dob,d_blood_group,d_weight,d_gender,d_age,d_email,d_address,d_city,d_state,d_pincode,c_id)
+VALUES('d027','Parth','Suryadhvaj','1990-01-11','B Positive',65,'M',31,'ParthSurya1211@gmail.com','Asarwa','Ahmedabad','Gujarat','382424','c06');
+
+
+
+
+======================================================================================================================================================================
+
+
+Donor Contact:
+
+
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d001',9845342683);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d001',9967995645);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d002',8798786789);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d003',9631874367);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d004',8756875637);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d005',6589764532);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d006',6754321234);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d006',8756321234);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d007',7654321234);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d008',9432123453);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d009',8766735683);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d010',8790995645);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d011',7654786789);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d011',9123874367);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d012',9867875687);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d012',8965764532);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d013',7894321234);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d014',8222321234);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d015',6752321234);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d016',6754327656);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d016',9845638656);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d017',9967995674);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d018',8798783423);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d019',9631879867);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d020',8756875687);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d020',6589764532);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d021',6754323264);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d022',675432644);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d022',8765454234);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d023',7656789876);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d023',9845635683);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d024',9967995645);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d024',8798786789);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d025',9631874367);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d025',8756875687);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d026',6589764532);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d026',7689521234);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d027',9878921234);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d027',9090921234);
+INSERT INTO donor_contact(d_id,d_contact_no)
+VALUES('d027',9909921234);
+
+
+======================================================================================================================================================================
+
+
+Donation:
+
+
+INSERT INTO donation(b_id,d_id,d_date,d_unit)
+VALUES('b01','d001','2021-11-18',3);
+INSERT INTO donation(b_id,d_id,d_date,d_unit)
+VALUES('b02','d002','2021-11-18',1);
+INSERT INTO donation(b_id,d_id,d_date,d_unit)
+VALUES('b03','d003','2021-11-18',2);
+INSERT INTO donation(b_id,d_id,d_date,d_unit)
+VALUES('b04','d004','2021-11-18',3);
+INSERT INTO donation(b_id,d_id,d_date,d_unit)
+VALUES('b05','d005','2021-11-18',2);
+INSERT INTO donation(b_id,d_id,d_date,d_unit)
+VALUES('b06','d006','2021-11-18',1);
+INSERT INTO donation(b_id,d_id,d_date,d_unit)
+VALUES('b07','d007','2021-11-18',2);
+INSERT INTO donation(b_id,d_id,d_date,d_unit)
+VALUES('b08','d008','2021-11-18',3);
+
+
+INSERT INTO donation(b_id,d_id,d_date,d_unit)
+VALUES('b09','d009','2021-12-19',3);
+INSERT INTO donation(b_id,d_id,d_date,d_unit)
+VALUES('b10','d010','2021-12-19',1);
+INSERT INTO donation(b_id,d_id,d_date,d_unit)
+VALUES('b11','d011','2021-12-19',2);
+INSERT INTO donation(b_id,d_id,d_date,d_unit)
+VALUES('b12','d012','2021-12-19',3);
+INSERT INTO donation(b_id,d_id,d_date,d_unit)
+VALUES('b13','d013','2021-12-19',1);
+INSERT INTO donation(b_id,d_id,d_date,d_unit)
+VALUES('b14','d014','2021-12-19',2);
+INSERT INTO donation(b_id,d_id,d_date,d_unit)
+VALUES('b15','d015','2021-12-19',1);
+INSERT INTO donation(b_id,d_id,d_date,d_unit)
+VALUES('b16','d016','2021-12-19',2);
+
+
+INSERT INTO donation(b_id,d_id,d_date,d_unit)
+VALUES('b17','d017','2021-01-10',2);
+INSERT INTO donation(b_id,d_id,d_date,d_unit)
+VALUES('b18','d018','2021-01-10',3);
+INSERT INTO donation(b_id,d_id,d_date,d_unit)
+VALUES('b19','d019','2021-01-10',1);
+INSERT INTO donation(b_id,d_id,d_date,d_unit)
+VALUES('b20','d020','2021-01-10',2);
+
+
+INSERT INTO donation(b_id,d_id,d_date,d_unit)
+VALUES('b21','d021','2021-11-10',2);
+INSERT INTO donation(b_id,d_id,d_date,d_unit)
+VALUES('b22','d022','2021-11-10',3);
+INSERT INTO donation(b_id,d_id,d_date,d_unit)
+VALUES('b23','d023','2021-11-10',1);
+INSERT INTO donation(b_id,d_id,d_date,d_unit)
+VALUES('b24','d024','2021-11-10',2);
+
+
+INSERT INTO donation(b_id,d_id,d_date,d_unit)
+VALUES('b25','d025','2021-12-15',2);
+INSERT INTO donation(b_id,d_id,d_date,d_unit)
+VALUES('b26','d026','2021-12-15',3);
+
+
+INSERT INTO donation(b_id,d_id,d_date,d_unit)
+VALUES('b27','d027','2021-02-15',2);
+
+
+======================================================================
+
+
+Inventory:
+
+
+INSERT INTO inventory(b_id,dept_id,blood_group,blood_stock)
+VALUES('b01','d01','A Negative',3);
+INSERT INTO inventory(b_id,dept_id,blood_group,blood_stock)
+VALUES('b02','d01','B Negative',1);
+INSERT INTO inventory(b_id,dept_id,blood_group,blood_stock)
+VALUES('b03','d01','A Positive',2);
+INSERT INTO inventory(b_id,dept_id,blood_group,blood_stock)
+VALUES('b04','d01','B Positive',3);
+INSERT INTO inventory(b_id,dept_id,blood_group,blood_stock)
+VALUES('b05','d01','AB Negative',2);
+INSERT INTO inventory(b_id,dept_id,blood_group,blood_stock)
+VALUES('b06','d01','AB Positive',1);
+INSERT INTO inventory(b_id,dept_id,blood_group,blood_stock)
+VALUES('b07','d01','O Negative',2);
+INSERT INTO inventory(b_id,dept_id,blood_group,blood_stock)
+VALUES('b08','d01','O Positive',3);
+
+
+INSERT INTO inventory(b_id,dept_id,blood_group,blood_stock)
+VALUES('b09','d03','A Negative',3);
+INSERT INTO inventory(b_id,dept_id,blood_group,blood_stock)
+VALUES('b10','d03','B Negative',1);
+INSERT INTO inventory(b_id,dept_id,blood_group,blood_stock)
+VALUES('b11','d03','A Positive',2);
+INSERT INTO inventory(b_id,dept_id,blood_group,blood_stock)
+VALUES('b12','d03','B Positive',3);
+INSERT INTO inventory(b_id,dept_id,blood_group,blood_stock)
+VALUES('b13','d03','AB Negative',1);
+INSERT INTO inventory(b_id,dept_id,blood_group,blood_stock)
+VALUES('b14','d03','AB Positive',2);
+INSERT INTO inventory(b_id,dept_id,blood_group,blood_stock)
+VALUES('b15','d03','O Negative',1);
+INSERT INTO inventory(b_id,dept_id,blood_group,blood_stock)
+VALUES('b16','d03','O Positive',2);
+
+
+INSERT INTO inventory(b_id,dept_id,blood_group,blood_stock)
+VALUES('b17','d05','A Positive',2);
+INSERT INTO inventory(b_id,dept_id,blood_group,blood_stock)
+VALUES('b18','d05','AB Negative',3);
+INSERT INTO inventory(b_id,dept_id,blood_group,blood_stock)
+VALUES('b19','d05','A Negative',1);
+INSERT INTO inventory(b_id,dept_id,blood_group,blood_stock)
+VALUES('b20','d05','B Negative',2);
+
+
+INSERT INTO inventory(b_id,dept_id,blood_group,blood_stock)
+VALUES('b21','d07','O Positive',2);
+INSERT INTO inventory(b_id,dept_id,blood_group,blood_stock)
+VALUES('b22','d07','AB Positive',3);
+INSERT INTO inventory(b_id,dept_id,blood_group,blood_stock)
+VALUES('b23','d07','O Negative',1);
+INSERT INTO inventory(b_id,dept_id,blood_group,blood_stock)
+VALUES('b24','d07','B Positive',2);
+
+
+INSERT INTO inventory(b_id,dept_id,blood_group,blood_stock)
+VALUES('b25','d09','A Negative',2);
+INSERT INTO inventory(b_id,dept_id,blood_group,blood_stock)
+VALUES('b26','d09','B Positive',3);
+
+
+INSERT INTO inventory(b_id,dept_id,blood_group,blood_stock)
+VALUES('b27','d03','B Positive',2);
+
+==================================================================================================================================
+
+
+Hospital:
+
+
+INSERT INTO hospital(h_id,h_name,h_contact_no) 
+VALUES('h01','Samrpan Hospital',9654834534);
+INSERT INTO hospital(h_id,h_name,h_contact_no) 
+VALUES('h02','New Day Hospital',7856341234);
+INSERT INTO hospital(h_id,h_name,h_contact_no) 
+VALUES('h03','LifeLine Hospital',9834567821);
+INSERT INTO hospital(h_id,h_name,h_contact_no) 
+VALUES('h04','Chirayu Hospital',6543345567);
+INSERT INTO hospital(h_id,h_name,h_contact_no) 
+VALUES('h05','Shivam Hospital',9898989898);
+
+
+======================================================================
+
+
+Patient:
+
+
+INSERT INTO patient(p_id,p_fname,p_lname,p_dob,p_blood_grp,p_weight,p_email,p_age,p_gender,p_address,p_city,p_state,p_pincode,h_id)
+VALUES('P001','Mitesh','Lathiya','1997-03-12','B Negative',70,'miteshl12@gmail.com',25,'M','Varachha','Surat','Gujarat','394101','h01');
+INSERT INTO patient(p_id,p_fname,p_lname,p_dob,p_blood_grp,p_weight,p_email,p_age,p_gender,p_address,p_city,p_state,p_pincode,h_id)
+VALUES('P002','Vishal','Devani','2001-12-17','A Negative',75,'vishaldevani@gmail.com',21,'M','Mota Varachha','Surat','Gujarat','394101','h02');
+INSERT INTO patient(p_id,p_fname,p_lname,p_dob,p_blood_grp,p_weight,p_email,p_age,p_gender,p_address,p_city,p_state,p_pincode,h_id)
+VALUES('P003','Himanshu','Zadafiya','1999-04-11','A Positive',76,'himanshuZ@gmail.com',25,'M','Varachha','Surat','Gujarat','394101','h01');
+INSERT INTO patient(p_id,p_fname,p_lname,p_dob,p_blood_grp,p_weight,p_email,p_age,p_gender,p_address,p_city,p_state,p_pincode,h_id)
+VALUES('P004','Keval','Tilavat','2002-05-18','O Negative',67,'kevalTilavat@gmail.com',20,'M','Asarwa','Ahmedabad','Gujarat','382424','h04');
+INSERT INTO patient(p_id,p_fname,p_lname,p_dob,p_blood_grp,p_weight,p_email,p_age,p_gender,p_address,p_city,p_state,p_pincode,h_id)
+VALUES('P005','Khushboo','Vadhani','1995-12-10','B Negative',65,'Khushboovadhani@gmail.com',26,'F','Sughad','Gandhinagar','Gujarat','382424','h03');
+
+
+======================================================================
+
+
+Patient Conatact:
+
+
+INSERT INTO patient_contact(p_id,p_contact_no)
+VALUES('P001',8734679234);
+INSERT INTO patient_contact(p_id,p_contact_no)
+VALUES('P001',7654765876);
+INSERT INTO patient_contact(p_id,p_contact_no)
+VALUES('P002',8734679234);
+INSERT INTO patient_contact(p_id,p_contact_no)
+VALUES('P003',8734679234);
+INSERT INTO patient_contact(p_id,p_contact_no)
+VALUES('P004',8734679234);
+INSERT INTO patient_contact(p_id,p_contact_no)
+VALUES('P005',9845239821);
+
+
+======================================================================
+
+
+Patient disease:
+
+
+INSERT INTO patient_disease(p_id,p_disease)
+VALUES('P001','Cancer');
+INSERT INTO patient_disease(p_id,p_disease)
+VALUES('P001','Chagas disease');
+INSERT INTO patient_disease(p_id,p_disease)
+VALUES('P002','Asthama');
+INSERT INTO patient_disease(p_id,p_disease)
+VALUES('P003','Diabetes');
+INSERT INTO patient_disease(p_id,p_disease)
+VALUES('P004','Depression');
+INSERT INTO patient_disease(p_id,p_disease)
+VALUES('P005','Cyclospora');
+
+
+======================================================================
+
+
+Payment:
+
+
+INSERT INTO payment(t_id,t_amount,t_date,p_id)
+VALUES('tr01',12000,'2021-11-18','P001');
+INSERT INTO payment(t_id,t_amount,t_date,p_id)
+VALUES('tr02',25000,'2021-10-10','P002');
+INSERT INTO payment(t_id,t_amount,t_date,p_id)
+VALUES('tr03',17000,'2022-01-10','P003');
+INSERT INTO payment(t_id,t_amount,t_date,p_id)
+VALUES('tr04',11000,'2021-09-15','P004');
+INSERT INTO payment(t_id,t_amount,t_date,p_id)
+VALUES('tr05',9000,'2022-02-10','P005');
+
+
+=====================================================================================================================================================
+
+
+Request:
+
+
+INSERT INTO request(r_id,r_date,r_blood_amount,r_blood_group,p_id,h_id,bb_id)
+VALUES('r001','2021-11-18',3,'B Negative','P001','h01','bb01');
+INSERT INTO request(r_id,r_date,r_blood_amount,r_blood_group,p_id,h_id,bb_id)
+VALUES('r002','2021-10-13',2,'A Negative','P002','h02','bb02');
+INSERT INTO request(r_id,r_date,r_blood_amount,r_blood_group,p_id,h_id,bb_id)
+VALUES('r003','2021-12-17',3,'B Negative','P005','h03','bb03');
+INSERT INTO request(r_id,r_date,r_blood_amount,r_blood_group,p_id,h_id,bb_id)
+VALUES('r004','2021-10-06',3,'A Positive','P003','h01','bb01');
+INSERT INTO request(r_id,r_date,r_blood_amount,r_blood_group,p_id,h_id,bb_id)
+VALUES('r005','2022-01-10',3,'O Negative','P004','h04','bb02');
