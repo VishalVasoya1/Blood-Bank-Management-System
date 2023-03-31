@@ -9,13 +9,13 @@ Blood Bank Management Systems are important for efficient and effective manageme
 <h3>Solution:</h3> 
 We used PostgreSQL to create a database for a Blood Bank Management System that tracks blood donations, inventory, and other related information, including managing blood camps. We followed the principles of RDBMS and normalized the tables to minimize data redundancy and ensure data integrity. We created the following tables:
 
-<h3>Important tables</h3>
-<h4>Donor:<h4> stores information about blood donors, including donor ID, name, age, blood group, contact information, and last donation date.<br>
-* Donation: stores information about blood donations, including donation ID, donor ID, donation date, blood type, and quantity.
-* Inventory: stores information about the inventory of blood products, including inventory ID, blood type, quantity, and expiration date.
-* Hospital: stores information about hospitals that receive blood products from the blood bank, including hospital ID, name, location, and contact information.
-* Request: stores information about requests for blood products from hospitals, including request ID, hospital ID, blood type, quantity, and request date.
-* Camp: stores information about blood donation camps, including camp ID, location, date, and contact information.
+<h3>Important tables:</h3>
+<b>Donor:</b> Stores information about blood donors, including donor ID, name, age, blood group, contact information, and last donation date.<br>
+* Donation: Stores information about blood donations, including donation ID, donor ID, donation date, blood type, and quantity.<br>
+* Inventory: Stores information about the inventory of blood products, including inventory ID, blood type, quantity, and expiration date.<br>
+* Hospital: Stores information about hospitals that receive blood products from the blood bank, including hospital ID, name, location, and contact information.<br>
+* Request: Stores information about requests for blood products from hospitals, including request ID, hospital ID, blood type, quantity, and request date.<br>
+* Camp: Stores information about blood donation camps, including camp ID, location, date, and contact information.<br>
 * We also created relations between these tables to ensure data consistency and to make querying the data easier. For example, the Donation table has a foreign key relationship with the Donor table, the Request table has a foreign key relationship with both the Hospital and Inventory tables, and the Donation table has a foreign key relationship with the Camp table.
 
 <h3>We wrote a variety of analysis queries that can provide useful information for managing a blood bank and blood camps, such as:</h3>
